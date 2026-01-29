@@ -1,0 +1,6 @@
+@PowerMas.API_HostAddress = http://localhost:5165
+
+GET {{PowerMas.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
