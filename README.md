@@ -163,6 +163,11 @@ powermas-gestion-beneficiarios/
 - SQL Server 2019+
 - Stored Procedures
 
+## 🎥 Demostración del Proyecto
+Haz clic en la imagen para ver el video en YouTube:
+
+[![Demo en YouTube](https://img.youtube.com/vi/MdCN64LaGD8/maxresdefault.jpg)](https://www.youtube.com/watch?v=MdCN64LaGD8)
+
 ## Notas Importantes
 
 - La conexión a BD usa `Trusted_Connection` (Windows Authentication)
