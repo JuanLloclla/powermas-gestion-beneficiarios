@@ -4,6 +4,9 @@ import type { EliminarBeneficiarioDto, UpdateBeneficiarioDto } from '../types';
 import EliminarBeneficiario from './modals/EliminarBeneficiario';
 import EditarBeneficiario from './modals/EditarBeneficiario';
 
+import { FaDeleteLeft } from "react-icons/fa6";
+import { FaUserEdit } from "react-icons/fa";
+
 interface BeneficiarioListProps {
   beneficiarios: Beneficiario[];
   onEliminar: (id: number) => Promise<void>;
@@ -66,11 +69,11 @@ export default function BeneficiarioList({
             <table className="w-full">
                 <thead className="bg-gray-100 border-b border-gray-400">
                 <tr>
-                    <th className="px-4 py-3 text-left text-sm font-bold text-gray-700">Nombres</th>
-                    <th className="px-4 py-3 text-left text-sm font-bold text-gray-700">Apellidos</th>
-                    <th className="px-4 py-3 text-left text-sm font-bold text-gray-700">Documento</th>
-                    <th className="px-4 py-3 text-left text-sm font-bold text-gray-700">País</th>
-                    <th className="w-72 px-4 py-3 text-left text-sm font-bold text-gray-700">Acciones</th>
+                    <th className="px-4 py-3 text-left text-base font-bold text-gray-700">Nombres</th>
+                    <th className="px-4 py-3 text-left text-base font-bold text-gray-700">Apellidos</th>
+                    <th className="px-4 py-3 text-left text-base font-bold text-gray-700">Documento</th>
+                    <th className="px-4 py-3 text-left text-base font-bold text-gray-700">País</th>
+                    <th className="w-72 px-4 py-3 text-left text-base font-bold text-gray-700">Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -84,15 +87,23 @@ export default function BeneficiarioList({
                     <td className="px-4 py-3 text-sm text-gray-900">{beneficiario.documentoIdentidad?.pais}</td>
                     <td className="px-4 py-3 text-sm flex justify-center items-center gap-1">
                         <button
-                        className="w-24 text-white bg-slate-600 hover:bg-slate-700 cursor-pointer border rounded-md py-1 text-[14px]"
+                        className="
+                            w-24 text-white bg-slate-600 hover:bg-slate-700 cursor-pointer border rounded-md py-1.5 font-semibold
+                            flex items-center gap-2 justify-center
+                        "
                         onClick={() => HandleAbrirModalEditar(beneficiario)}
                         >
+                        <FaUserEdit />
                         Editar
                         </button>
                         <button
-                        className="w-24 text-white bg-red-400 hover:bg-red-500 cursor-pointer border rounded-md py-1 text-[14px]"
+                        className="
+                            w-24 text-white bg-red-400 hover:bg-red-500 cursor-pointer border rounded-md py-1.5 font-semibold
+                            flex items-center gap-2 justify-center
+                        "
                         onClick={() => HandleAbrirModalEliminar(beneficiario)}
                         >
+                        <FaDeleteLeft />
                         Eliminar
                         </button>
                     </td>

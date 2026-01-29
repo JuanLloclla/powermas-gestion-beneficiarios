@@ -111,14 +111,14 @@ export default function EditarBeneficiario({
             <button
               type="submit"
               disabled={isActualizando}
-              className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+              className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 disabled:bg-gray-400 font-semibold cursor-pointer"
             >
               {isActualizando ? "Actualizando..." : "Guardar"}
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 bg-gray-300 text-gray-700 py-2 rounded hover:bg-gray-400"
+              className="flex-1 bg-gray-300 text-gray-700 py-2 rounded hover:bg-gray-400 font-semibold cursor-pointer"
             >
               Cancelar
             </button>

@@ -31,14 +31,14 @@ export default function EliminarBeneficiario({
             <p className="mb-7">¿Seguro que quiere eliminar el resgistro de <strong>{beneficiario.nombres} {beneficiario.apellidos}</strong>?</p>
             <div className="flex justify-end gap-2 mt-4">
                 <button 
-                    className="py-1 text-white bg-red-500 rounded cursor-pointer w-28"
+                    className="py-1 text-white bg-red-500 rounded font-semibold cursor-pointer w-28 hover:bg-red-400"
                     onClick={handletEliminar}
                     disabled={isEliminando}
                 >
                     {isEliminando? "Eliminando...": "Eliminar"}
                 </button>
                 <button 
-                    className="py-1 bg-gray-300 rounded cursor-pointer w-28"
+                    className="py-1 bg-gray-300 rounded font-semibold cursor-pointer w-28 hover:bg-gray-400"
                     onClick={onClose}
                     disabled={isEliminando}
                 >
